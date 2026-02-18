@@ -6,7 +6,9 @@ og_type: website
 
 # New Website Quickstart
 
-This is the default landing page for a new website using this template.
+This is the default landing page for a new website using the **XenoAtom** template.
+
+This template extends [`lunet-io/templates`](https://github.com/lunet-io/templates) with XenoAtom organization defaults (base URL, owner metadata, favicon) and a distinctive warm purple-tinted dark background.
 
 Use it as a setup checklist, then replace it with your real homepage content.
 
@@ -15,7 +17,7 @@ Use it as a setup checklist, then replace it with your real homepage content.
 Reference the template and set project values:
 
 ```scriban
-extend "XenoAtom/lunet_template@1.0.0"
+extend "XenoAtom/lunet_template"
 
 site_project_name = "MyProject"
 site_project_description = "Short project description."
@@ -26,16 +28,14 @@ site_project_package_id = "MyProject"
 site_project_github_repo = "MyProject"
 site_project_basepath = "/myproject"
 
-# Optional: override the default favicon path (/favicon.ico)
-template_project_favicon_path = "/favicon.ico"
-
 site_project_init
 ```
 
 Notes:
 
 - `site_project_logo_path` defaults to `/img/XenoAtom-logo.png` if not set.
-- Favicon defaults to `/favicon.ico`. Keep a file there, or override `template_project_favicon_path`.
+- Favicon defaults to `/favicon.ico`. Override with `site_project_favicon_path`.
+- Owner, license, and GitHub user are pre-set for XenoAtom. Override `site_project_*` values if needed.
 
 ## 2) Create top navigation `menu.yml`
 

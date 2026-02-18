@@ -1,0 +1,63 @@
+/*
+ * XenoAtom theme overrides — dark background color customization.
+ *
+ * The XenoAtom palette uses a warm purple-tinted dark background (#1f1b25)
+ * from the Rootloops ANSI palette, giving XenoAtom sites a distinctive look
+ * compared to the default lunet-io/templates cool blue-grey.
+ *
+ * Source palette: https://rootloops.sh?sugar=7&colors=9&sogginess=2&flavor=1&fruit=10&milk=0.96
+ */
+
+:root[data-bs-theme="dark"] {
+    /* Core background surfaces */
+    --lunet-color-background: #1f1b25;
+    --lunet-color-background-rgb: 31, 27, 37;
+    --lunet-color-foreground: #dcd8e4;
+    --lunet-color-foreground-rgb: 220, 216, 228;
+    --lunet-color-cursor: #a69eb6;
+    --lunet-color-surface-1: #262030;
+    --lunet-color-surface-2: #332a3e;
+    --lunet-color-border: rgba(220, 216, 228, 0.16);
+    --lunet-color-border-strong: rgba(220, 216, 228, 0.28);
+
+    /* Code block backgrounds */
+    --lunet-code-bg: #231e2a;
+    --lunet-code-inline-bg: #28222f;
+    --lunet-code-selection-bg: #3d3549;
+
+    /* Bootstrap overrides */
+    --bs-body-bg-rgb: var(--lunet-color-background-rgb);
+    --bs-body-bg: var(--lunet-color-background);
+    --bs-body-color-rgb: var(--lunet-color-foreground-rgb);
+    --bs-body-color: var(--lunet-color-foreground);
+    --bs-border-color: var(--lunet-color-border);
+    --bs-tertiary-bg: var(--lunet-color-surface-1);
+    --bs-secondary-bg: var(--lunet-color-surface-2);
+}
+
+/* Also apply to system-preference dark mode */
+@media (prefers-color-scheme: dark) {
+    :root[data-lunet-theme-mode="system"]:not([data-bs-theme="light"]) {
+        --lunet-color-background: #1f1b25;
+        --lunet-color-background-rgb: 31, 27, 37;
+        --lunet-color-foreground: #dcd8e4;
+        --lunet-color-foreground-rgb: 220, 216, 228;
+        --lunet-color-cursor: #a69eb6;
+        --lunet-color-surface-1: #262030;
+        --lunet-color-surface-2: #332a3e;
+        --lunet-color-border: rgba(220, 216, 228, 0.16);
+        --lunet-color-border-strong: rgba(220, 216, 228, 0.28);
+
+        --lunet-code-bg: #231e2a;
+        --lunet-code-inline-bg: #28222f;
+        --lunet-code-selection-bg: #3d3549;
+
+        --bs-body-bg-rgb: var(--lunet-color-background-rgb);
+        --bs-body-bg: var(--lunet-color-background);
+        --bs-body-color-rgb: var(--lunet-color-foreground-rgb);
+        --bs-body-color: var(--lunet-color-foreground);
+        --bs-border-color: var(--lunet-color-border);
+        --bs-tertiary-bg: var(--lunet-color-surface-1);
+        --bs-secondary-bg: var(--lunet-color-surface-2);
+    }
+}

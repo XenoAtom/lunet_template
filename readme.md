@@ -1,24 +1,31 @@
-# Lunet Website Template
+# XenoAtom Lunet Template
 
-This repository contains the shared [lunet](https://github.com/lunet-io/lunet) website template used by XenoAtom project docs sites.
+Organization-level [lunet](https://github.com/lunet-io/lunet) template for all XenoAtom documentation sites. Extends the base [`lunet-io/templates`](https://github.com/lunet-io/templates) with XenoAtom-specific defaults.
+
+## What this template provides
+
+- **Organization defaults** — base URL (`xenoatom.github.io`), owner metadata, license, footer branding
+- **Dark background override** — warm purple-tinted dark palette (`#1f1b25`) via `xenoatom-overrides.css`
+- **Favicon and logo** — shared `favicon.ico` and `XenoAtom-logo.png`
+
+Everything else (layouts, CSS, JS, bundles, search, Prism components, theme toggle) is inherited from `lunet-io/templates`.
 
 ## Layout
 
-- `dist/.lunet/` — shared Lunet layouts, CSS, and JS assets
-- `dist/config.scriban` — shared Lunet config (everything except site-specific values)
-- `dist/404.md` — default 404 page
-- `dist/banner.md` — default social/banner capture page
-- `dist/.nojekyll` — GitHub Pages setting
+- `dist/config.scriban` — extends `lunet-io/templates`, sets XenoAtom defaults
+- `dist/.lunet/css/xenoatom-overrides.css` — dark background color override
+- `dist/favicon.ico` — shared favicon
+- `dist/img/XenoAtom-logo.png` — default project logo
 
 ## How a project site consumes this template
 
-1. Import shared config from this template:
+1. Import the template:
 
    ```scriban
-   extend "XenoAtom/lunet_template@1.0.0"
+   extend "XenoAtom/lunet_template"
    ```
 
-2. Keep project-specific values in `site/config.scriban` only:
+2. Set project-specific values in `site/config.scriban`:
    - `site_project_name`
    - `site_project_description`
    - `site_project_logo_path`
@@ -29,8 +36,3 @@ This repository contains the shared [lunet](https://github.com/lunet-io/lunet) w
    - `site_project_basepath`
 
 3. Call `site_project_init` after site-specific properties are set.
-
-## Notes
-
-- `dist` is the artifact-like source of truth for template content.
-- Do not add `site/.lunet/build` outputs to this template.
