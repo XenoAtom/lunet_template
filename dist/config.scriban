@@ -29,7 +29,7 @@ template_project_twitter_user = "xoofx"
 
 # Footer organization branding
 template_footer_organization_name = "XenoAtom"
-template_footer_organization_url = "https://github.com/XenoAtom"
+template_footer_organization_url = template_baseurl
 
 # -----------------------------------------------------------------------------
 # XenoAtom dark background color override
