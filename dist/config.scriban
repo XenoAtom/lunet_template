@@ -26,6 +26,7 @@ template_project_owner_url = "https://xoofx.github.io"
 template_project_content_license_name = "CC BY 2.5"
 template_project_content_license_url = "http://creativecommons.org/licenses/by/2.5/"
 template_project_twitter_user = "xoofx"
+template_theme_default_mode = "dark" # Prefer dark for XenoAtom sites
 
 # Footer organization branding
 template_footer_organization_name = "XenoAtom"
